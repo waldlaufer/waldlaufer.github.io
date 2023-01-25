@@ -1,1 +1,90 @@
-a
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.5em;
+            color: #666;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            transition: 0.2s;
+        }
+        img:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: auto;
+        }
+        li {
+            margin: 0 10px;
+        }
+        a {
+            font-size: 1.25em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        a:hover {
+            background-color: linear-gradient(to right, #ff0000, #ffa500, #ffff00, #00ff00, #0000ff, #4b0082, #ee82ee);
+            color: #fff;
+            border-color: transparent;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function changeColor(id) {
+            var element = document.getElementById(id);
+            element.style.color = "red";
+        }
+
+        function showContent(id) {
+            var element = document.getElementById(id);
+            element.classList.remove("hidden");
+        }
+
+        function hideContent(id) {
+            var element = document.getElementById(id);
+            element.classList.add("hidden");
+        }
+    </script>
+</head>
+<body>
+    <img src="your-picture.jpg" alt="Your picture">
+    <h1>Welcome to my homepage!</h1>
+    <p>Here are some topics you can learn more about:</p>
+    <ul>
+        <li><a href="math.html">Math</a></li>
+        <li><a href="chess.html">Chess</a></li>
+        <li><a href="programming.html">Programming</a>
+        <li><a href="philosophy.html" onclick="changeColor('philosophy')">Philosophy</a></li>
+        <li><a href="books.html" onclick="changeColor('books')">Books</a></li>
+    </ul>
+</body>
+</html>
